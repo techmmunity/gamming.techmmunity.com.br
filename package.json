@@ -1,15 +1,6 @@
 {
 	"name": "base-project-frontend",
 	"version": "0.0.0",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"serve": "vite preview",
-		"prepare": "husky install",
-		"husky:pre-commit": "tsc && lint-staged",
-		"lint": "eslint . --quiet",
-		"format": "eslint . --fix --quiet"
-	},
 	"dependencies": {
 		"react": "^17.0.0",
 		"react-countdown": "^2.3.2",
@@ -36,5 +27,14 @@
 		"typescript": "^4.3.2",
 		"vite": "^2.6.4",
 		"vite-tsconfig-paths": "^3.3.17"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"serve": "vite preview",
+		"prepare": "husky install",
+		"husky:pre-commit": "tsc && lint-staged",
+		"lint": "eslint . --quiet",
+		"format": "eslint . --fix --quiet"
 	}
 }
