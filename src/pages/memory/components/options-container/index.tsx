@@ -4,12 +4,12 @@ import { QuestionType } from "types/question";
 import { Container, OptionContainer } from "./styles";
 
 const Option: FC<{
-	idx: number;
+	id: string;
 	text: string;
-	onAnswer: (ans: number) => void;
-}> = ({ idx, text, onAnswer }) => {
+	onAnswer: (ans: string) => void;
+}> = ({ id, text, onAnswer }) => {
 	return (
-		<OptionContainer onClick={() => onAnswer(idx)}>
+		<OptionContainer onClick={() => onAnswer(id)}>
 			<ReactMarkdown>{text}</ReactMarkdown>
 		</OptionContainer>
 	);
@@ -17,12 +17,12 @@ const Option: FC<{
 
 const OptionsContainerComponent: FC<{
 	options: QuestionType["options"];
-	onAnswer: (ans: number) => void;
+	onAnswer: (ans: string) => void;
 }> = ({ options, onAnswer }) => {
 	return (
 		<Container>
-			{options.map((opt, idx) => (
-				<Option key={opt.id} text={opt.opt} idx={idx} onAnswer={onAnswer} />
+			{options.map(opt => (
+				<Option key={opt.id} text={opt.opt} id={opt.id} onAnswer={onAnswer} />
 			))}
 		</Container>
 	);

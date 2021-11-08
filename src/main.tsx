@@ -27,6 +27,7 @@ ReactDOM.render(
 			<Switch>
 				<Suspense fallback={<div></div>}>
 					<Route path="/" exact component={createComponent("home")} />
+					<Route path="/memory" exact component={createComponent("memory")} />
 				</Suspense>
 			</Switch>
 		</BrowserRouter>

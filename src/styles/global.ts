@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	html, body {
 		min-height: 100%;
+		background: #0a1119;
 	}
 
   html {
@@ -51,23 +52,25 @@ export const GlobalStyle = createGlobalStyle`
 		list-style: none;
 	}
 
+	/* width */
 	::-webkit-scrollbar {
-		width: 1rem;
-		height: 1rem;
+		width: 10px;
 	}
 
+	/* Track */
 	::-webkit-scrollbar-track {
-		background: var(--scrollbar-background);
-		border-radius: 4px;
+		background: #111921;
 	}
 
+	/* Handle */
 	::-webkit-scrollbar-thumb {
-		background: var(--scrollbar);
-		border-radius: 4px;
+		background: #16bfbf;
+		border-radius: 5px;
 	}
 
-	::-webkit-scrollbar-corner {
-		background: transparent;
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #16bfbf;
 	}
 
 	:root {

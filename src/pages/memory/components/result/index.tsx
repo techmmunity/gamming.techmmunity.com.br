@@ -1,8 +1,17 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 import { QUESTIONS } from "configs/questions";
-import { Container, Title, Table, Line, Counter, TryAgain } from "./styles";
+import {
+	Container,
+	Title,
+	Table,
+	Line,
+	Counter,
+	TryAgain,
+	BackHome,
+	ButtonsContainer,
+} from "./styles";
 
-export const Result: FC<{ answers: Array<number | undefined> }> = ({
+export const Result: FC<{ answers: Array<string | undefined> }> = ({
 	answers,
 }) => (
 	<Container>
@@ -23,18 +32,25 @@ export const Result: FC<{ answers: Array<number | undefined> }> = ({
 				{answers.map((a, idx) => {
 					const qst = QUESTIONS[idx];
 
+					const rightAnswer = qst.options.find(
+						opt => opt.id === qst.rightAnswer,
+					);
+
 					return (
 						<Line key={qst.question}>
 							<td>{idx + 1}</td>
-							<td>{qst.options[qst.rightAnswer].opt}</td>
+							<td>{rightAnswer?.opt}</td>
 							<td>{qst.rightAnswer === a ? "☑️" : "✖️"}</td>
 						</Line>
 					);
 				})}
 			</tbody>
 		</Table>
-		<TryAgain onClick={() => window.location.reload()}>
-			Jogar novamente
-		</TryAgain>
+		<ButtonsContainer>
+			<TryAgain onClick={() => window.location.reload()}>
+				Jogar novamente
+			</TryAgain>
+			<BackHome href="/">Voltar para a Home</BackHome>
+		</ButtonsContainer>
 	</Container>
 );

@@ -59,6 +59,11 @@ export const Counter = styled.span`
 	font-size: 3rem;
 `;
 
+export const ButtonsContainer = styled.div`
+	display: flex;
+	gap: 3rem;
+`;
+
 export const TryAgain = styled.button`
 	background: #0a1119;
 	border-radius: 5px;
@@ -74,5 +79,22 @@ export const TryAgain = styled.button`
 	&:focus {
 		background: #00d3cd;
 		color: #0a1119;
+	}
+`;
+
+export const BackHome = styled.a`
+	background: #00d3cd;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	padding: 1rem 1.5rem;
+	color: #0a1119;
+	font-weight: bold;
+	cursor: pointer;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background: #00d3cd99;
 	}
 `;

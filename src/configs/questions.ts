@@ -1,64 +1,312 @@
 import { QuestionType } from "types/question";
+import { v4 } from "uuid";
 
 export const QUESTIONS: Array<QuestionType> = [
 	{
-		question: "foo",
+		question:
+			"Das alternativas a seguir, qual delas **NÃO** pode ser usada para tipagem?",
 		options: [
+			{
+				id: v4(),
+				opt: "enum",
+			},
 			{
 				id: "f44c2dd1-587b-415d-8a55-0bfd99b59039",
-				opt: "foo",
+				opt: "const",
 			},
 			{
-				id: "79322922-a05d-4735-913e-4eb2a5d4524e",
-				opt: "bar",
+				id: v4(),
+				opt: "interface",
 			},
 			{
-				id: "4e8976e0-801d-42fe-9d2f-4668df81ccba",
-				opt: "fooBar",
-			},
-			{
-				id: "815cdcbe-667b-4627-9aa2-72a56d2a1e2c",
-				opt: "barFoo",
-			},
-			{
-				id: "31f18675-47a0-47aa-87e0-c856f89071ae",
-				opt: "barBar",
-			},
-			{
-				id: "6f2f2edb-c281-493a-a72e-46f69976080c",
-				opt: "fooFoo",
+				id: v4(),
+				opt: "type",
 			},
 		],
-		rightAnswer: 4,
+		rightAnswer: "f44c2dd1-587b-415d-8a55-0bfd99b59039",
 	},
 	{
-		question: "bar",
+		question: `A sintaxe abaixo é referente a que?
+
+\`const foo = () => {}\``,
 		options: [
 			{
-				id: "e8f9f37e-b751-4f76-b69e-303c62ff58e2",
-				opt: "",
+				id: v4(),
+				opt: "Uma variável",
 			},
 			{
-				id: "52e2b367-9f25-413e-a81a-b6b8e60f3386",
-				opt: "",
+				id: v4(),
+				opt: "Uma constante",
 			},
 			{
-				id: "31cf471e-4760-4597-88e5-58e45cb3ad0a",
-				opt: "",
+				id: v4(),
+				opt: "Um objeto",
 			},
 			{
-				id: "67cd7664-c415-44b9-a023-e7ef62d26408",
-				opt: "",
+				id: v4(),
+				opt: "Um array",
 			},
 			{
 				id: "f70d0cc8-4a29-4782-ae4c-e0b13feb3f40",
-				opt: "",
+				opt: "Uma função",
 			},
 			{
-				id: "71de98e9-fede-40dd-b77b-9259e5e6c59c",
-				opt: "",
+				id: v4(),
+				opt: "Uma classe",
 			},
 		],
-		rightAnswer: 4,
+		rightAnswer: "f70d0cc8-4a29-4782-ae4c-e0b13feb3f40",
+	},
+	{
+		question: `A sintaxe abaixo é referente a que?
+
+\`const foo = "foo"\``,
+		options: [
+			{
+				id: "a42c1e5e-6882-4f06-90c9-a4809aeb4a4c",
+				opt: "Uma variável",
+			},
+			{
+				id: v4(),
+				opt: "Um objeto",
+			},
+			{
+				id: v4(),
+				opt: "Um array",
+			},
+			{
+				id: v4(),
+				opt: "Uma função",
+			},
+			{
+				id: v4(),
+				opt: "Uma classe",
+			},
+		],
+		rightAnswer: "a42c1e5e-6882-4f06-90c9-a4809aeb4a4c",
+	},
+	{
+		question: `Qual o tipo da variável abaixo?
+
+\`const foo = "foo"\``,
+		options: [
+			{
+				id: "5258197b-89a2-456f-be30-846a92c0b975",
+				opt: "string",
+			},
+			{
+				id: v4(),
+				opt: "number",
+			},
+			{
+				id: v4(),
+				opt: "array",
+			},
+			{
+				id: v4(),
+				opt: "function",
+			},
+			{
+				id: v4(),
+				opt: "class",
+			},
+			{
+				id: v4(),
+				opt: "object",
+			},
+		],
+		rightAnswer: "5258197b-89a2-456f-be30-846a92c0b975",
+	},
+	{
+		question: `Qual o tipo da variável abaixo?
+
+\`const foo = [1]\``,
+		options: [
+			{
+				id: v4(),
+				opt: "string",
+			},
+			{
+				id: v4(),
+				opt: "number",
+			},
+			{
+				id: "88d4b23c-56d7-4942-bf87-bd936496aebe",
+				opt: "array",
+			},
+			{
+				id: v4(),
+				opt: "function",
+			},
+			{
+				id: v4(),
+				opt: "class",
+			},
+			{
+				id: v4(),
+				opt: "object",
+			},
+		],
+		rightAnswer: "88d4b23c-56d7-4942-bf87-bd936496aebe",
+	},
+	{
+		question: `Qual o tipo da variável abaixo?
+
+\`const foo = 1\``,
+		options: [
+			{
+				id: v4(),
+				opt: "string",
+			},
+			{
+				id: "5333f792-1d23-45d9-b4fc-eff4b1f2e33a",
+				opt: "number",
+			},
+			{
+				id: v4(),
+				opt: "array",
+			},
+			{
+				id: v4(),
+				opt: "function",
+			},
+			{
+				id: v4(),
+				opt: "class",
+			},
+			{
+				id: v4(),
+				opt: "object",
+			},
+		],
+		rightAnswer: "5333f792-1d23-45d9-b4fc-eff4b1f2e33a",
+	},
+	{
+		question: `Qual o tipo da variável abaixo?
+
+\`const foo = {}\``,
+		options: [
+			{
+				id: v4(),
+				opt: "string",
+			},
+			{
+				id: v4(),
+				opt: "number",
+			},
+			{
+				id: v4(),
+				opt: "array",
+			},
+			{
+				id: v4(),
+				opt: "function",
+			},
+			{
+				id: v4(),
+				opt: "class",
+			},
+			{
+				id: "e925c1e2-9c48-4f66-b163-f59e08641ee2",
+				opt: "object",
+			},
+		],
+		rightAnswer: "e925c1e2-9c48-4f66-b163-f59e08641ee2",
+	},
+	{
+		question: `Qual o tipo do parametro que a função abaixo recebe?
+
+\`type foo = (count: number) => string\``,
+		options: [
+			{
+				id: v4(),
+				opt: "string",
+			},
+			{
+				id: "e7796f0c-6f43-4c26-840c-a244ba8eebfc",
+				opt: "number",
+			},
+			{
+				id: v4(),
+				opt: "array",
+			},
+			{
+				id: v4(),
+				opt: "function",
+			},
+			{
+				id: v4(),
+				opt: "class",
+			},
+			{
+				id: v4(),
+				opt: "object",
+			},
+		],
+		rightAnswer: "e7796f0c-6f43-4c26-840c-a244ba8eebfc",
+	},
+	{
+		question: `Qual o tipo do parametro que a função abaixo recebe?
+
+\`type foo = (count: number) => string\``,
+		options: [
+			{
+				id: v4(),
+				opt: "string",
+			},
+			{
+				id: "e7796f0c-6f43-4c26-840c-a244ba8eebfc",
+				opt: "number",
+			},
+			{
+				id: v4(),
+				opt: "array",
+			},
+			{
+				id: v4(),
+				opt: "function",
+			},
+			{
+				id: v4(),
+				opt: "class",
+			},
+			{
+				id: v4(),
+				opt: "object",
+			},
+		],
+		rightAnswer: "e7796f0c-6f43-4c26-840c-a244ba8eebfc",
+	},
+	{
+		question: `Qual o tipo do retorno da função abaixo?
+
+\`type foo = (count: number) => string\``,
+		options: [
+			{
+				id: "3b5e80af-d96e-435a-a0c0-a3586a261b58",
+				opt: "string",
+			},
+			{
+				id: v4(),
+				opt: "number",
+			},
+			{
+				id: v4(),
+				opt: "array",
+			},
+			{
+				id: v4(),
+				opt: "function",
+			},
+			{
+				id: v4(),
+				opt: "class",
+			},
+			{
+				id: v4(),
+				opt: "object",
+			},
+		],
+		rightAnswer: "3b5e80af-d96e-435a-a0c0-a3586a261b58",
 	},
 ];

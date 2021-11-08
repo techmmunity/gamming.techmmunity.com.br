@@ -1,6 +1,7 @@
 export interface QuestionType {
 	question: string;
-	rightAnswer: number;
+	image?: string;
+	rightAnswer: string;
 	options: Array<{
 		id: string;
 		opt: string;
