@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
+import ReactMarkdown from "react-markdown";
 import { QUESTIONS } from "configs/questions";
 import {
 	Container,
@@ -39,7 +40,9 @@ export const Result: FC<{ answers: Array<string | undefined> }> = ({
 					return (
 						<Line key={qst.question}>
 							<td>{idx + 1}</td>
-							<td>{rightAnswer?.opt}</td>
+							<td>
+								<ReactMarkdown>{rightAnswer?.opt || ""}</ReactMarkdown>
+							</td>
 							<td>{qst.rightAnswer === a ? "☑️" : "✖️"}</td>
 						</Line>
 					);

@@ -7,17 +7,16 @@ export const Container = styled.div`
 `;
 
 export const OptionContainer = styled.button`
-	width: 30rem;
-	height: 5rem;
+	min-width: 30rem;
+	min-height: 5rem;
 	background: #0a1119;
 	border-radius: 5px;
 	display: flex;
-	align-items: center;
 	padding: 1rem 1.5rem;
 	color: #00d3cd;
 	font-weight: bold;
 	cursor: pointer;
-	transition: color 0.2s ease-out;
+	transition: color 0.5s ease-out;
 
 	&:hover,
 	&:active,

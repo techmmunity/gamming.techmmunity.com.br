@@ -1,5 +1,4 @@
 import { memo } from "react";
-import ReactMarkdown from "react-markdown";
 import { QuestionType } from "types/question";
 import { Container, OptionContainer } from "./styles";
 
@@ -8,11 +7,7 @@ const Option: FC<{
 	text: string;
 	onAnswer: (ans: string) => void;
 }> = ({ id, text, onAnswer }) => {
-	return (
-		<OptionContainer onClick={() => onAnswer(id)}>
-			<ReactMarkdown>{text}</ReactMarkdown>
-		</OptionContainer>
-	);
+	return <OptionContainer onClick={() => onAnswer(id)}>{text}</OptionContainer>;
 };
 
 const OptionsContainerComponent: FC<{

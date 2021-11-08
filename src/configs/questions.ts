@@ -246,38 +246,6 @@ export const QUESTIONS: Array<QuestionType> = [
 		rightAnswer: "e7796f0c-6f43-4c26-840c-a244ba8eebfc",
 	},
 	{
-		question: `Qual o tipo do parametro que a função abaixo recebe?
-
-\`type foo = (count: number) => string\``,
-		options: [
-			{
-				id: v4(),
-				opt: "string",
-			},
-			{
-				id: "e7796f0c-6f43-4c26-840c-a244ba8eebfc",
-				opt: "number",
-			},
-			{
-				id: v4(),
-				opt: "array",
-			},
-			{
-				id: v4(),
-				opt: "function",
-			},
-			{
-				id: v4(),
-				opt: "class",
-			},
-			{
-				id: v4(),
-				opt: "object",
-			},
-		],
-		rightAnswer: "e7796f0c-6f43-4c26-840c-a244ba8eebfc",
-	},
-	{
 		question: `Qual o tipo do retorno da função abaixo?
 
 \`type foo = (count: number) => string\``,
@@ -308,5 +276,34 @@ export const QUESTIONS: Array<QuestionType> = [
 			},
 		],
 		rightAnswer: "3b5e80af-d96e-435a-a0c0-a3586a261b58",
+	},
+	{
+		question: `Como ficaria a tipagem do objeto abaixo?
+
+\`\`\`javascript
+const foo = {
+	bar: 1,
+	fooBar: ["foo"]
+}
+\`\`\``,
+		options: [
+			{
+				id: v4(),
+				opt: "type Foo = Record<string, number | Array<number>>;",
+			},
+			{
+				id: v4(),
+				opt: "enum Foo {\n	bar: number;\n	fooBar: Array<string>;\n}",
+			},
+			{
+				id: "a6033221-750a-4ee8-9310-9e5ae5996b01",
+				opt: "interface Foo {\n	bar: number;\n	fooBar: Array<string>;\n}",
+			},
+			{
+				id: v4(),
+				opt: "type Foo = {\n	bar: number;\n	fooBar: Array<string>;\n}",
+			},
+		],
+		rightAnswer: "a6033221-750a-4ee8-9310-9e5ae5996b01",
 	},
 ];

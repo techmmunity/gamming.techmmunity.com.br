@@ -44,7 +44,7 @@ export const Game = styled(Link)`
 	color: #00d3cd;
 	font-weight: bold;
 	cursor: pointer;
-	transition: color 0.2s ease-out;
+	transition: color 0.5s ease-out;
 
 	&:hover,
 	&:active,

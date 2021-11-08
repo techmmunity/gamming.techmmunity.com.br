@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
 		user-select: none;
 
 		&:focus-visible {
-			outline: var(--alternative-outline);
-		 	box-shadow: var(--outline);
+			outline: red;
+			box-shadow: var(--outline);
 		}
   }
 
