@@ -17,6 +17,7 @@ export const OptionContainer = styled.button`
 	color: #00d3cd;
 	font-weight: bold;
 	cursor: pointer;
+	transition: color 0.2s ease-out;
 
 	&:hover,
 	&:active,

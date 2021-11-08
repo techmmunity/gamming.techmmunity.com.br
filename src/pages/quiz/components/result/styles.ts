@@ -73,6 +73,7 @@ export const TryAgain = styled.button`
 	color: #00d3cd;
 	font-weight: bold;
 	cursor: pointer;
+	transition: color 0.2s ease-out;
 
 	&:hover,
 	&:active,
@@ -91,6 +92,7 @@ export const BackHome = styled.a`
 	color: #0a1119;
 	font-weight: bold;
 	cursor: pointer;
+	transition: color 0.2s ease-out;
 
 	&:hover,
 	&:active,

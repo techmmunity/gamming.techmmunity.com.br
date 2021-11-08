@@ -1,5 +1,5 @@
-import Memory from "./memory.png";
+import Quiz from "./quiz.png";
 
 export const IMAGES = {
-	memory: Memory,
+	quiz: Quiz,
 };

@@ -9,7 +9,7 @@ import { Result } from "./components/result";
 import { Version } from "./components/version";
 import { Container, Top, Bottom } from "./styles";
 
-const Memory = () => {
+const Quiz = () => {
 	const [completed, setCompleted] = useState<boolean>(false);
 	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 	const [currentQuestion, setCurrentQuestion] = useState<number>(0);
@@ -67,4 +67,4 @@ const Memory = () => {
 	);
 };
 
-export default Memory;
+export default Quiz;

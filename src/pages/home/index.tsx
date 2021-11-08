@@ -6,8 +6,8 @@ const Home = () => {
 		<Container>
 			<Title>Escolha o jogo</Title>
 			<Grid>
-				<Game to="/memory">
-					<Image src={IMAGES.memory} /> Jodo Da Memória
+				<Game to="/quiz">
+					<Image src={IMAGES.quiz} /> Quiz
 				</Game>
 			</Grid>
 		</Container>
